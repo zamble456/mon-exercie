@@ -1,0 +1,134 @@
+/*generale*/
+html, body{
+	overflow: hidden;
+}
+header{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 60px;
+
+	background-color:pink;
+	
+}
+
+header .icon{
+	position:absolute;
+	display: none;
+	top: 0px;
+	right: 0px;
+	height:60%;
+	width: 60px;
+}
+@media only screen and (max-width: 720px){
+	header .icon{
+		display: block;
+	}
+}
+header .icon img{
+	width: 60px;
+	height: 60px;
+}
+.menu{
+	position: absolute;
+	top: 0px;
+	right: -250px;
+	height: 100%;
+	width: 250px;
+    transition: all 0.3s ease;
+	background-color: pink;
+}
+.active{
+	right: 0px;
+	transition: all 0.3s ease;
+}
+.menu a{
+	text-decoration: none;
+	color:white;
+	font-size: 17px;
+	font-family: arial, sans serif;
+	width: 100%;
+	display: block;
+	text-align: center;
+text-transform: uppercase;
+padding: 20px 0px;
+
+}
+a:hover{
+	color: rgba(129,110,111);
+	transition: all 0.3s ease;
+	background-color: white;
+}
+
+.comble{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	right: 250px;
+	
+}
+ header{
+	background-color: #333;
+	height: 50px;
+	
+}
+.comble ul{
+	list-style: none;
+	text-align: center;
+}
+.comble a{
+	text-decoration: none;
+	color: rgba(255,255,255,0.8);
+	font-size: 17px;
+	font-family: arial, sans serif;
+
+}
+.comble a:hover{
+	color: rgba(242,110,189,0.7);
+}
+.comble nav ul li{
+	display: inline-block;
+	margin-left: 50px;
+margin-top: 15px;
+
+}
+.contenu{
+	height: 100vh;	
+	width: 100%;
+	background:linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.2)),url("img/tv2.jpg");
+	background-size: cover;
+	background-position: center;
+}
+ #wrapper{
+	width: 35%;
+	margin:50px auto;
+	padding: 20px;
+	background: #EFFFE0;
+}
+.comble form{
+	width: 50%;
+	margin: 100px auto;
+}
+.comble form div{
+	margin: 3px auto;
+}
+.textInput{
+	margin-top: 2px;
+	height: 28px;
+	border: 1px solid #5E6E66;
+	font-size: 16px;
+	padding: 1px;
+	width: 100%;
+}
+.btn{
+	padding: 7px;
+	width: 100%;
+}
+.val_error{
+	color: #FF1F1F;
+}
+.global{
+	background-color: rgba(212,222,208,0.8);
+}

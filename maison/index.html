@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>mon site</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no;initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="dev.css">
+
+</head>
+<body>
+<header>
+	<div class="icon">
+		<img src="img/icon.png">
+	</div>
+</header>
+<div class="menu">
+	<a href="#">Musique</a></li>
+	<a href="#">iPad</a>
+	<a href="#">iPhone</a>
+	<a href="#">Watch</a>
+	<a href="#">TV</a>
+	<a href="#">Music</a>
+	<a href="#">Support</a>
+</div>
+<div class="comble">
+	</div>
+<div class="contenu">
+	<div id="wrapper">
+	<form method="POST" action="index.php" onsubmit="return validate()" name="vform">
+		<div class="global">
+		<div>
+			<label>nom:</label>
+			<input type="text" name="username" class="textInput" placeholder="votre nom">
+			<div id="name_error" class="val_error"></div>
+		</div><br>
+		<div>
+			<label>email:</label>
+			<input type="email" name="email" class="textInput" placeholder="email">
+			<div id="email_error" class="val_error"></div>
+		</div><br>
+		<div>
+			<label>mdp:</label>
+			<input type="password" name="password" class="textInput" placeholder="mdp">
+		</div><br>
+		<div>
+			<label>cmdp:</label>
+			<input type="password" name="pass_confirmation" class="textInput" placeholder="cmdp">
+			<div id="password_error" class="val_error"></div>
+		</div><br>
+		<div>
+			<input type="submit" value="Register" class="btn" name="Register">
+		</div>
+    </div>
+	</form>
+</div>
+</div>
+
+
+</body>
+<script src="script.js" ></script>
+</html>
+<script type="text/javascript">
+	var username = document.forms["vform"]["username"];
+	var email = document.forms["vform"]["email"];
+	var password = document.forms["vform"]["password"];
+	var password_confirmation = document.forms["vform"]["password_confirmation"];
+	var name_error = document.getElementById("name_error");
+	var email_error = document.getElementById("email_error");
+	var password_error = document.getElementById("password_error");
+	username.addEventListener("blur",nameVerify,true);
+	email.addEventListener("blur",emailVerify,true);
+	password.addEventListener("blur",passwordVerify,true);
+
+	function validate(){
+		if(username.value ==""){
+			username.style.border="1px solid red";
+			name_error.textContent="username is required";
+			username.focus();
+			return false;
+		}		
+		if(email.value ==""){
+			email.style.border="1px solid red";
+			email_error.textContent="email is required";
+			email.focus();
+			return false;
+		}		
+		if(password.value ==""){
+			password.style.border="1px solid red";
+			password_error.textContent="password is required";
+			password.focus();
+			return false;
+		}
+		if(password.value !=password_confirmation.value){
+			password.style.border="1px solid red";
+			password_confirmation.style.border="1px solid red";
+			password_error.innerHTML="the passwords do not match";
+			return false;
+		}			
+		if(username.string>10){
+			username.style.border="1px solid red";
+			username_error.innerHTML="the username do not match";
+			return false;
+		}	
+		if(username.value!=string){
+			username.style.border="1px solid red";
+			username_error.innerHTML="the username do not match";
+			return false;
+		}				
+	}
+	function nameVerify(){
+		if (username.value !=""){
+			username.style.border="1px solid #5E6E66";
+			username_error.innerHTML="";
+			return true;
+		}
+		if (email.value !=""){
+			email.style.border="1px solid #5E6E66";
+			email_error.innerHTML="";
+			return true;
+		}
+		if (password.value !=""){
+			password.style.border="1px solid #5E6E66";
+			password_error.innerHTML="";
+			return true;
+		}
+	}
+</script>
+	
